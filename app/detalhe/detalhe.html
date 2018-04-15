@@ -1,0 +1,83 @@
+<div ng-controller="detalheController" ng-cloak>
+
+  <section class="md-whiteframe-z1">
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <h2 flex="" md-truncate="">Beneficário</h2>
+      </div>
+    </md-toolbar>
+    <form>
+
+      <div layout-gt-sm="row">
+
+        <datainfo data-label="Nome" ng-model="transacao.beneficiario.nome"></datainfo>
+        <div flex="5" hide-xs="" hide-sm=""></div>
+
+        <datainfo data-label="Agência" ng-model="transacao.beneficiario.agencia"></datainfo>
+        <div flex="5" hide-xs="" hide-sm=""></div>
+
+        <datainfo data-label="Banco" ng-model="transacao.beneficiario.banco"></datainfo>
+        <div flex="5" hide-xs="" hide-sm=""></div>
+
+        <datainfo data-label="Conta" ng-model="transacao.beneficiario.conta"></datainfo>
+
+      </div>
+    </form>
+  </section>
+
+  <br>
+
+  <section class="md-whiteframe-z1">
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <h2 flex="" md-truncate="">Pagador</h2>
+      </div>
+    </md-toolbar>
+    <form>
+
+      <div layout-gt-sm="row">
+
+        <datainfo data-label="Nome" ng-model="transacao.pagador.nome"></datainfo>
+        <div flex="5" hide-xs="" hide-sm=""></div>
+
+        <datainfo data-label="Agência" ng-model="transacao.pagador.agencia"></datainfo>
+        <div flex="5" hide-xs="" hide-sm=""></div>
+
+        <datainfo data-label="Banco" ng-model="transacao.pagador.banco"></datainfo>
+        <div flex="5" hide-xs="" hide-sm=""></div>
+
+        <datainfo data-label="Conta" ng-model="transacao.pagador.conta"></datainfo>
+      </div>
+    </form>
+  </section>
+
+  <br>
+
+  <section class="md-whiteframe-z1">
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <h2 flex="" md-truncate="">Transação</h2>
+      </div>
+    </md-toolbar>
+
+    <form>
+
+      <div layout-gt-sm="row">
+
+        <datainfo data-label="Status" ng-model="transacao.status"></datainfo>
+        <div flex="5" hide-xs="" hide-sm=""></div>
+
+        <datainfo data-label="Tipo" ng-model="transacao.tipo"></datainfo>
+        <div flex="5" hide-xs="" hide-sm=""></div>
+
+        <datainfo data-label="Valor" ng-model="transacao.valor"></datainfo>
+
+    </form>
+  </section>
+
+  <br>
+
+  <div>
+    <md-button href="/">Voltar</md-button>
+  </div>
+  </div>

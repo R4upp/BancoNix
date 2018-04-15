@@ -1,0 +1,20 @@
+{
+  "name": "projetonexxera",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-animate": "^1.6.9",
+    "angular-aria": "^1.6.9",
+    "angular-material": "^1.1.8",
+    "angular-messages": "^1.6.9",
+    "angular-route": "^1.6.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "http-server ./src -a localhost -p 8080"
+  },
+  "author": "Tiago Raupp",
+  "license": "ISC"
+}

@@ -1,0 +1,51 @@
+<div ng-controller="listaController">
+
+  <form ng-submit="filtrarTransacao()">
+    <div layout-gt-sm="row">
+
+      <md-input-container class="md-block" flex-gt-sm="">
+        <label>Beneficiário</label>
+        <input type="text" name="beneficiario" ng-model="filtro.beneficiario" />
+      </md-input-container>
+
+      <md-input-container class="md-block" flex-gt-sm="">
+        <label>Pagador</label>
+        <input type="text" name="pagador" ng-model="filtro.pagador" />
+      </md-input-container>
+
+      <md-input-container class="md-block" flex-gt-sm="">
+        <label>Status</label>
+        <md-select name="status" ng-model="filtro.status">
+          <md-option ng-value="status.id" ng-repeat="status in statusLista">{{ status.nome }}</md-option>
+        </md-select>
+      </md-input-container>
+
+      <md-input-container class="md-block" flex-gt-sm="">
+        <label>Tipo</label>
+        <md-select name="tipo" ng-model="filtro.tipo">
+          <md-option ng-value="tipo.id" ng-repeat="tipo in tipoLista">{{ tipo.nome }}</md-option>
+        </md-select>
+      </md-input-container>
+      <div>
+        <md-button type="submit">Filtrar</md-button>
+      </div>
+    </div>
+  </form>
+
+  <table class="md-table">
+    <tbody>
+      <tr ng-repeat="transacao in transacoes | iniciarAPartir: inicioPaginacao | limitTo:qtdPorPagina" ng-click="verDetalhe(transacao)">
+        <td> {{ transacao.beneficiario.nome }} </td>
+        <td> {{ transacao.pagador.nome }} </td>
+        <td> {{ transacao.status }} </td>
+        <td> {{ transacao.tipo }} </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <md-button class="md-fab md-mini" 
+  ng-repeat="index in [] | intervalo:transacoes.length / 5" 
+  ng-class="{'md-primary': inicioPaginacao == (index * qtdPorPagina) }"
+  ng-click="atualizarInicioPaginacao(index);">{{ index + 1 }}
+  </md-button>
+</div>

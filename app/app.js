@@ -1,0 +1,1 @@
+var nixApp = angular.module('nixApp', ['ngRoute', 'ngMaterial']);
